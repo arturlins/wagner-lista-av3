@@ -1,12 +1,11 @@
-
 from os import system
 from services.search_service import *
 
 while True:
     try:            
-        print("Bem-vindo à Biblioteca de Games!\nEscolha uma opção abaixo: ")
-        print("1 - Fazer busca por texto")
-        print("2 - Listar os games em ordem crescente")
+        print("Bem-vindo à Biblioteca de Jogos!\nEscolha uma opção abaixo: ")
+        print("1 - Fazer busca no catálogo")
+        print("2 - Listar apenas os títulos dos jogos em ordem crescente")
         print("3 - Listar os jogos que contêm 'k' no título ou subtítulo")
         print("4 - Sair")
         opc = int(input("Selecione a opção: "))

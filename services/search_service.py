@@ -11,12 +11,13 @@ def search_games():
     result = cursor.fetchall()
     if result:    
         print(f"Resultados encontrados em '{search}': ")
-        for row in result:
-            titulo, subtitulo = row
-            print(f"Título: {titulo}: {subtitulo}")
+        for titulo, subtitulo in result:
+            print(f"- {titulo}: {subtitulo}")
+        print("\n")
     else:
         system('cls')
         print(f"Nenhum jogo encontrado em '{search}'")
+        print("\n")
         
 def list_games():
     system('cls')
@@ -26,9 +27,9 @@ def list_games():
     cursor.execute(sql)
     result = cursor.fetchall()
     print("Lista de todos os jogos em ordem alfabética: ")
-    for row in result:
-       titulo, subtitulo = row
-       print(f"Título: {titulo}")
+    for titulo, subtitulo in result:
+       print(f"- {titulo}")
+    print("\n")
 
 def search_k_games():
     system('cls')
@@ -39,8 +40,9 @@ def search_k_games():
     result = cursor.fetchall()
     if result:    
         print(f"Resultados encontrados em 'k': ")
-        for row in result:
-            titulo, subtitulo = row
-            print(f"Título: {titulo}: {subtitulo}")
+        for titulo, subtitulo in result:
+            print(f"- {titulo}: {subtitulo}")
+        print("\n")
     else:
         print(f"Nenhum jogo encontrado em 'k'")
+        print("\n")
